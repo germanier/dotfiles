@@ -1,0 +1,19 @@
+[credential]
+	helper = manager-core
+	helper = 
+	helper = /usr/bin/git-credential-manager-core
+	credentialStore = secretservice
+[user]
+	email = "marco@mrgt.me"
+	name = "Marco Germanier"
+[core]
+	editor = micro
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[pull]
+	rebase = false
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
